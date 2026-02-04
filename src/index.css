@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "@radix-ui/themes/styles.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #000000;
+}
