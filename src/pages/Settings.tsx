@@ -47,7 +47,7 @@ const Settings: React.FC = () => {
                 className="h-4 w-4 shrink-0 text-teal-500"
                 aria-hidden
               />
-              <span>DIVET Veterinary Diagnostic Center</span>
+              <span>Veterinary Diagnostic Center</span>
             </div>
           </div>
         </div>
@@ -65,15 +65,13 @@ const Settings: React.FC = () => {
             <p className="text-xs font-medium uppercase tracking-wide text-slate-400">
               {t("settings.emailLabel")}
             </p>
-            <p className="mt-1 text-sm text-slate-900">
-              fer.divet.test@gmail.com
-            </p>
+            <p className="mt-1 text-sm text-slate-900">user.test@gmail.com</p>
           </div>
           <div>
             <p className="text-xs font-medium uppercase tracking-wide text-slate-400">
               {t("settings.phoneLabel")}
             </p>
-            <p className="mt-1 text-sm text-slate-900">4086504124</p>
+            <p className="mt-1 text-sm text-slate-900">483829382</p>
           </div>
           <div>
             <p className="text-xs font-medium uppercase tracking-wide text-slate-400">

@@ -30,10 +30,10 @@ export const DropdownMenuComponent = () => {
           </div>
           <div className="flex flex-col items-start">
             <span className="text-sm font-medium text-slate-900">
-              {t("dropdown.userName")}
+              User Test
             </span>
             <span className="text-[10px] uppercase tracking-wide text-slate-500">
-              {t("dropdown.orgName")}
+              Veterinary Diagnostic Center
             </span>
           </div>
           <ChevronDown className="h-4 w-4 shrink-0 text-slate-500 transition-transform" />
