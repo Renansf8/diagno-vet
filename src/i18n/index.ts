@@ -1,5 +1,5 @@
-import type { AppLanguage } from "../contexts/AppContext";
-import { useApp } from "../contexts/AppContext";
+import type { AppLanguage } from "../context/AppContext";
+import { useApp } from "../context/AppContext";
 import type { TranslationKeys } from "./locales/en";
 import { en } from "./locales/en";
 import { es } from "./locales/es";
@@ -61,11 +61,18 @@ type Path =
   | "settings.languageOptionEs"
   | "toast.languageUpdated";
 
-const getValueByPath = (obj: TranslationKeys, path: string): string | undefined => {
+const getValueByPath = (
+  obj: TranslationKeys,
+  path: string,
+): string | undefined => {
   const keys = path.split(".");
   let current: unknown = obj;
   for (const key of keys) {
-    if (current === null || current === undefined || typeof current !== "object") {
+    if (
+      current === null ||
+      current === undefined ||
+      typeof current !== "object"
+    ) {
       return undefined;
     }
     current = (current as Record<string, unknown>)[key];
@@ -75,7 +82,8 @@ const getValueByPath = (obj: TranslationKeys, path: string): string | undefined 
 
 const interpolate = (str: string, vars: Record<string, string>): string => {
   return Object.entries(vars).reduce(
-    (acc, [key, value]) => acc.replace(new RegExp(`\\{\\{${key}\\}\\}`, "g"), value),
+    (acc, [key, value]) =>
+      acc.replace(new RegExp(`\\{\\{${key}\\}\\}`, "g"), value),
     str,
   );
 };

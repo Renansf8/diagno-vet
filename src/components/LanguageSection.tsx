@@ -1,8 +1,8 @@
 import { Globe } from "lucide-react";
 import { translateForLanguage, useTranslation } from "../i18n";
 import { Select } from "@radix-ui/themes";
-import { useApp, type AppLanguage } from "../contexts/AppContext";
-import { useToast } from "../contexts/ToastContext";
+import { useApp, type AppLanguage } from "../context/AppContext";
+import { useToast } from "../context/ToastContext";
 
 export const LanguageSection = () => {
   const { t } = useTranslation();
